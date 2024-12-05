@@ -1,4 +1,4 @@
-// Kenneth Cardinalli, 
+// Kenneth Cardinalli, Jeff Shoemaker
 //Final Project -Madlibs-
 // 12-3-2024
 
@@ -15,7 +15,7 @@ void stringSwap(char[], char[]);
 int stringLength(char[]);
 void userPrompt(char[], char[][COLUMN]);
 //Please put inital next to chosen function, and feel free to change whatever
-void textGrab();
+void textGrab(); //JS
 void wordSwap();
 
 int main(){
@@ -36,6 +36,10 @@ return 0;
 
 //Functions
 //Idk if you guys will use this one but if you need it will output the value of the string length
+void textGrab(FILE *fPtr, char fullText[ROW][COLUMN]){
+	fscanf(fPtr, "%c", fullText);
+
+}
 int stringLength(){
 	int counter = 0;
 		for(int index = 0; str[index] != '\0'; index++){
