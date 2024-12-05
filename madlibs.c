@@ -15,7 +15,7 @@ void stringSwap(char[], char[]);
 int stringLength(char[]);
 void userPrompt(char[], char[][COLUMN]);
 //Please put inital next to chosen function, and feel free to change whatever
-void textGrab(); //JS
+void textGrab(FILE *fPtr, char fullText[ROW][COLUMN]); //JS
 void wordSwap();
 
 int main(){
