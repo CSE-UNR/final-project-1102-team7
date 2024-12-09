@@ -12,7 +12,6 @@
 //Function prototypes
 void stringCopy(char[], char[]);
 void stringSwap(char[], char[]);
-int stringLength(char[]);
 void userPrompt(char[][COLUMN], char[][COLUMN]);
 //Please put inital next to chosen function, and feel free to change whatever
 void textGrab(FILE* fPtr, char[][COLUMN]); //JS
@@ -26,9 +25,9 @@ int main(){
 		printf("Cant open file\n");
 		return 0;
 		}
-	textGrab(FILE* fPtr, fullText[ROW][COLUMN]);
+	textGrab(fPtr, fullText);
 	fclose(fPtr);
-	userPrompt(words[ROW][COLUMN], fullText[ROW][COLUMN]);
+	userPrompt(words, fullText);
 
  
 
@@ -38,15 +37,6 @@ return 0;
 
 //Functions
 //Idk if you guys will use this one but if you need it will output the value of the string length
-int stringLength(){
-	int counter = 0;
-		for(int index = 0; str[index] != '\0'; index++){
-		counter++;	
-		}
-	
-	 
-	return str[counter];
-}
 void stringCopy(char source[], char dest[]){
 	for(int index = 0; source[index] != '\0'; index++){
 	dest[index] = source[index];
@@ -85,10 +75,10 @@ void userPrompt(char words[][COLUMN], char fullText[][COLUMN]){
 		}
 	}
 }
-void textGrab(FILE* fPtr, char[][COLUMN]){
+void textGrab(FILE* fPtr, char fullText[][COLUMN]){
 	for(int index = 0; index < ROW; index++){
 		for(int index2 = 0; fullText[index][index2] != 0; index2++){
-		fscanf(fPtr, fullText[index][index2]);
+		fscanf(fPtr, "%s", fullText[index][index2]);
 		}
 	}
 }
