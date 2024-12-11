@@ -1,4 +1,4 @@
-// Kenneth Cardinalli, Jeff Shoemaker
+// Kenneth Cardinalli, Jeff Shoemaker, Cosmo Vazquez Tirado
 //Final Project -Madlibs-
 // 12-3-2024
 
