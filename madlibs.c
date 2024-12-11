@@ -88,7 +88,7 @@ void textGrab(FILE* fPtr, char fullText[ROW][COLUMN]) {
 void textReplace(char fullText[][COLUMN], char words[][COLUMN]){
 	int indexW = 0;
 	for(int index = 0; index < ROW; index++){
-		if(fullText[index] == 'A' || fullText[index] == 'V' || fullText[index] == 'N'){
+		if(fullText[index] == "A" || fullText[index] == "V" || fullText[index] == "N"){
 		stringCopy();
 		}
 	}
