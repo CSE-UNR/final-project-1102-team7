@@ -14,7 +14,7 @@ void stringCopy(char[], char[]);
 void displayMadlib(char fullText[][COLUMN]);
 void userPrompt(char[][COLUMN], char[][COLUMN]);
 void textGrab(FILE* fPtr, char[][COLUMN]);
-void textReplace();
+void textReplace(char[][COLUMN], char[][COLUMN]);
 
 int main() {
     char fullText[ROW][COLUMN], swappedText[ROW][COLUMN], words[10][COLUMN];
@@ -28,7 +28,7 @@ int main() {
     textGrab(fPtr, fullText);
     fclose(fPtr);
     userPrompt(words, fullText);
-    textReplace();
+    textReplace(fullText, words);
     displayMadlib(fullText);
     return 0;
 }
@@ -42,7 +42,7 @@ void stringCopy(char source[], char dest[]) {
 
 void displayMadlib(char fullText[][COLUMN]){
 	for(int index = 0; index < ROW; index++){
-		printf("%s", fullText[index]);
+		printf("%s ", fullText[index]);
 	}
 }
 
@@ -89,7 +89,9 @@ void textReplace(char fullText[][COLUMN], char words[][COLUMN]){
 	int indexW = 0;
 	for(int index = 0; index < ROW; index++){
 		if(fullText[index] == "A" || fullText[index] == "V" || fullText[index] == "N"){
-		stringCopy();
+		stringCopy(words[indexW], fullText[index]);
 		}
+	index += 1;
+	indexW += 1;
 	}
 }
